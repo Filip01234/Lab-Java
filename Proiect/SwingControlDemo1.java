@@ -59,22 +59,6 @@ public class SwingControlDemo1 {
             }
         });
 
-        JButton saveButton = new JButton("Save");
-        saveButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                JSONObject jsonObject = new JSONObject();
-                jsonObject.put("username", userText.getText());
-
-                try (FileWriter file = new FileWriter("data.json", true)) {
-                    file.write(jsonObject.toJSONString() + "\n");
-                    file.flush();
-                    statusLabel.setText("Data saved to JSON file");
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                    statusLabel.setText("Error while saving data");
-                }
-            }
-        });
 
         JButton cancelButton = new JButton("Cancel");
         cancelButton.addActionListener(new ActionListener() {
@@ -89,7 +73,6 @@ public class SwingControlDemo1 {
 
         JPanel buttonPanel = new JPanel(new FlowLayout());
         buttonPanel.add(loginButton);
-        buttonPanel.add(saveButton);
         buttonPanel.add(cancelButton);
 
         controlPanel.add(textPanel);
