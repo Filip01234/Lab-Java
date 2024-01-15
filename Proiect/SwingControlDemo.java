@@ -3,18 +3,18 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.*;
 
-public class SwingControlDemo1 {
+public class SwingControlDemo {
     private JFrame mainFrame;
     private JLabel headerLabel;
     private JLabel statusLabel;
     private JPanel controlPanel;
 
-    public SwingControlDemo1() {
+    public SwingControlDemo() {
         prepareGUI();
     }
 
     public static void main(String[] args) {
-        SwingControlDemo1 swingControlDemo = new SwingControlDemo1();
+        SwingControlDemo swingControlDemo = new SwingControlDemo();
         swingControlDemo.showTextFieldDemo();
         swingControlDemo.showCheckBoxDemo();
         swingControlDemo.showRadioButtonDemo();
@@ -23,7 +23,7 @@ public class SwingControlDemo1 {
     }
 
     private void prepareGUI() {
-        mainFrame = new JFrame("Java Swing Examples");
+        mainFrame = new JFrame("Proiect Sacaciu Filip Daniel");
         mainFrame.setSize(400, 400);
         mainFrame.setLayout(new GridLayout(3, 1));
 
