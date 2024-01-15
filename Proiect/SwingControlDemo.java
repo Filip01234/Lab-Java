@@ -3,6 +3,11 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.*;
 
+
+import java.io.*;
+
+
+
 public class SwingControlDemo {
     private JFrame mainFrame;
     private JLabel headerLabel;
@@ -51,16 +56,14 @@ public class SwingControlDemo {
         JLabel namelabel = new JLabel("Name: ", JLabel.RIGHT);
         final JTextField userText = new JTextField(6);
 
-        JButton loginButton = new JButton("Login");
-        loginButton.addActionListener(new ActionListener() {
+        JButton saveButton = new JButton("Salvare");
+        saveButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                String data = "Username " + userText.getText();
-                statusLabel.setText(data);
+
             }
         });
 
-
-        JButton cancelButton = new JButton("Cancel");
+        JButton cancelButton = new JButton("Anulare");
         cancelButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
@@ -72,13 +75,15 @@ public class SwingControlDemo {
         textPanel.add(userText);
 
         JPanel buttonPanel = new JPanel(new FlowLayout());
-        buttonPanel.add(loginButton);
+        buttonPanel.add(saveButton);
         buttonPanel.add(cancelButton);
 
         controlPanel.add(textPanel);
         controlPanel.add(buttonPanel);
         mainFrame.setVisible(true);
     }
+
+
     private void showCheckBoxDemo() {
         headerLabel.setText("Control in action: CheckBox");
 
